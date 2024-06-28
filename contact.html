@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff; /* Set your desired body background color */
+    }
+    .contact {
+      background-color: orange; /* Set your desired contact section background color */
+      color: #fff; /* Set text color for better readability on the orange background */
+      padding: 80px 0;
+    }
+    .contact-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contact-info, .contact-form {
+      flex: 1;
+    }
+    .contact-info h3, .contact-form h3 {
+      color: #fff; /* Set text color for section headers */
+    }
+    .contact-info ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .contact-info ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .contact-info ul li ion-icon {
+      margin-right: 10px;
+    }
+    .contact-info ul li address, .contact-info ul li a {
+      color: #fff; /* Set text color for contact details */
+      text-decoration: none;
+    }
+    .contact-info ul li a:hover {
+      text-decoration: underline;
+    }
+    .contact-form form {
+      max-width: 400px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff; /* Set text color for form labels */
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    .btn {
+      background-color: #333; /* Set button background color */
+      color: #fff; /* Set button text color */
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn:hover {
+      background-color: #555; /* Change button background color on hover */
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+    }
+  </style>
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+      </button>
+
+      <a href="#" class="logo">Kitter</a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="/index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Shop</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blog.html" class="navbar-link" data-nav-link>Blogs</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+        <a href="#" class="navbar-action-btn">Log In</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="action-btn" aria-label="Search">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="action-btn user" aria-label="User">
+          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="action-btn" aria-label="cart">
+          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact section">
+    <div class="container">
+
+      <div class="contact-wrapper grid-list">
+        <div class="contact-info">
+          <h3 class="h3">Get In Touch</h3>
+          <p>Feel free to reach out to us through any of the following methods:</p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>Lebanon, Beirut </address>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+1234567890">+961 81 611 427</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@example.com">ali@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form">
+          <h3 class="h3">Send Us a Message</h3>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add Ionicons for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
